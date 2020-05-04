@@ -214,7 +214,7 @@ determine the exact padding."
 
    ;; evil
    ;; TODO: re-use vars properly
-   (evil-ex-search          :background dark-cyan :foreground "#fff1e5")
+   (evil-ex-search          :background cyan :foreground "#fff1e5")
    (evil-ex-lazy-highlight  :background cyan :foreground "#ffffff" )
 
    ;; I-search
