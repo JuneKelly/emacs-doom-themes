@@ -62,7 +62,7 @@ determine the exact padding."
 
   ;; name        default   256       16
   ((bg         ft-paper)
-   (bg-alt     (doom-darken ft-paper 0.1))
+   (bg-alt     ft-wheat)
    (base0      bg-alt)
    (base1      (doom-darken base0 0.1))
    (base2      (doom-darken base1 0.1))
@@ -123,12 +123,12 @@ determine the exact padding."
 
    (modeline-bg
     (if -modeline-bright
-        (doom-darken base2 0.05)
-      base1))
+        (doom-darken base0 0.05)
+      base0))
    (modeline-bg-l
     (if -modeline-bright
-        (doom-darken base2 0.1)
-      base2))
+        (doom-darken base1 0.1)
+      base1))
    (modeline-bg-inactive (doom-darken bg 0.1))
    (modeline-bg-inactive-l `(,(doom-darken (car bg-alt) 0.05) ,@(cdr base1))))
 
@@ -216,6 +216,22 @@ determine the exact padding."
    ;; TODO: re-use vars properly
    (evil-ex-search          :background dark-cyan :foreground "#fff1e5")
    (evil-ex-lazy-highlight  :background cyan :foreground "#ffffff" )
+
+   ;; I-search
+   (match                                        :foreground fg :background bg-alt)
+   (isearch                                      :inherit 'match :box `(:line-width 2 :color ,dark-cyan))
+   (lazy-highlight                               :inherit 'match)
+   (isearch-fail                                 :foreground red)
+   ;; swiper
+   (swiper-background-match-face-1               :inherit 'match :bold bold)
+   (swiper-background-match-face-2               :inherit 'match)
+   (swiper-background-match-face-3               :inherit 'match :foreground green)
+   (swiper-background-match-face-4               :inherit 'match :bold bold :foreground green)
+   (swiper-match-face-1                          :inherit 'isearch :bold bold)
+   (swiper-match-face-2                          :inherit 'isearch)
+   (swiper-match-face-3                          :inherit 'isearch :foreground green)
+   (swiper-match-face-4                          :inherit 'isearch :bold bold :foreground green)
+   (swiper-line-face                             :inherit 'hl-line)
 
    ;; lsp
    (lsp-ui-doc-background      :background base0)
