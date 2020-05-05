@@ -62,11 +62,11 @@ determine the exact padding."
 
   ;; name        default   256       16
   ((bg         ft-paper)
-   (bg-alt     ft-wheat)
+   (bg-alt     (doom-darken ft-paper 0.05))
    (base0      bg-alt)
-   (base1      (doom-darken base0 0.1))
-   (base2      (doom-darken base1 0.1))
-   (base3      (doom-darken base2 0.1))
+   (base1      (doom-darken base0 0.05))
+   (base2      (doom-darken base1 0.05))
+   (base3      (doom-darken base2 0.05))
    (base4      '("#9ca0a4" "#9ca0a4" "brightblack"  ))
    (base5      '("#383a42" "#424242" "brightblack"  ))
    (base6      '("#202328" "#2e2e2e" "brightblack"  ))
@@ -123,8 +123,8 @@ determine the exact padding."
 
    (modeline-bg
     (if -modeline-bright
-        (doom-darken base0 0.05)
-      base0))
+        (doom-darken base1 0.05)
+      base1))
    (modeline-bg-l
     (if -modeline-bright
         (doom-darken base1 0.1)
@@ -190,6 +190,10 @@ determine the exact padding."
    ((org-block-begin-line &override) :foreground fg :slant 'italic)
    (org-ellipsis :underline nil :background bg     :foreground red)
    ((org-quote &override) :background base1)
+
+   ;; js2-mode
+   (js2-object-property :foreground teal)
+   (js2-object-property-access :foreground dark-blue)
 
    ;; helm
    (helm-candidate-number :background blue :foreground bg)
