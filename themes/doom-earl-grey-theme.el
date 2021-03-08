@@ -198,7 +198,7 @@ determine the exact padding."
                :inherit 'italic)
 
     ;; highlight-quoted-mode
-    (highlight-quoted-symbol :foreground orange) ;; TODO: maybe? Or blue?
+    (highlight-quoted-symbol :foreground blue)
     (highlight-quoted-quote  :foreground teal)
 
     ;; rainbow-delimiters
