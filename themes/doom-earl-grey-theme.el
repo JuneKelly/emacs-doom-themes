@@ -114,6 +114,32 @@ determine the exact padding."
   ;; --- extra faces ------------------------
   ((default :background bg :foreground fg)
 
+   ;; Modeline
+   (doom-modeline-buffer-path       :foreground blue)
+   (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path
+                                    :bold 'bold)
+   (doom-modeline-info              :foreground green)
+   (doom-modeline-project-dir       :foreground magenta)
+   (doom-modeline-evil-insert-state :foreground teal)
+   (doom-modeline-bar :background (if -modeline-bright modeline-bg highlight))
+   (mode-line
+    :background modeline-bg :foreground modeline-fg
+    :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg)))
+   (mode-line-inactive
+    :background modeline-bg-inactive :foreground modeline-fg-alt
+    :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-inactive)))
+   (mode-line-emphasis
+    :foreground (if -modeline-bright base8 highlight))
+   (doom-modeline-project-root-dir :foreground base6)
+   (solaire-mode-line-face
+    :inherit 'mode-line
+    :background modeline-bg-l
+    :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-l)))
+   (solaire-mode-line-inactive-face
+    :inherit 'mode-line-inactive
+    :background modeline-bg-inactive-l
+    :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-inactive-l)))
+
    ;; Font-Lock
    (font-lock-comment-face
     :foreground comments ; TODO: Check this works
@@ -136,16 +162,43 @@ determine the exact padding."
     (font-lock-function-name-face        :foreground fg
                                          :inherit 'italic :extend t)
 
+    ;; makefile-*-mode
+    (makefile-targets :foreground magenta)
+
+    ;; which-key
+    (which-key-key-face                   :foreground blue)
+    (which-key-group-description-face     :foreground magenta)
+    (which-key-command-description-face   :foreground fg)
+    (which-key-local-map-description-face :foreground orange)
+    (which-key-separator-face             :background bg-alt
+                                          :foreground comments)
+
+    ;; highlight-numbers-mode
+    (highlight-numbers-number :foreground teal
+                              :weight 'semi-bold)
+
+    ;; web-mode
+    (web-mode-doctype-face           :foreground comments)
+    (web-mode-html-tag-face          :foreground magenta)
+    (web-mode-html-attr-name-face    :foreground fg
+                                     :inherit 'italic)
+    (web-mode-html-attr-value-face   :inherit 'font-lock-string-face)
+    (web-mode-html-entity-face       :foreground orange
+                                     :inherit 'italic)
+    (web-mode-block-control-face     :foreground base1)
+    (web-mode-html-tag-bracket-face  :foreground fg-alt)
+    (web-mode-symbol-face            :foreground blue)
+    (web-mode-string-face            :inherit 'font-lock-string-face)
+
    ;; TODO:
    ;;   - Git
-   ;;   - completion list
+   ;;   - completion list / company
    ;;   - parens
-   ;;   - modeline
    ;;   - dashboard
-   ;;   - menu
+   ;;   - swiper
 
    ((region &override)
-    :foreground base7)
+    :foreground fg)
 
    ((lazy-highlight &override) :background bg-alt)
    ((line-number &override) :foreground (doom-lighten 'base5 0.2))
@@ -154,28 +207,6 @@ determine the exact padding."
    ((paren-face-mismatch &override) :foreground base3 :background red :weight 'ultra-bold)
    ((vimish-fold-overlay &override) :inherit 'font-lock-comment-face :background base3 :weight 'light)
    ((vimish-fold-fringe &override) :foreground teal)
-
-   ;; TODO: sort out modeline
-   (doom-modeline-bar :background (if -modeline-bright modeline-bg highlight))
-
-   (mode-line
-    :background modeline-bg :foreground modeline-fg
-    :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg)))
-   (mode-line-inactive
-    :background modeline-bg-inactive :foreground modeline-fg-alt
-    :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-inactive)))
-   (mode-line-emphasis
-    :foreground (if -modeline-bright base8 highlight))
-
-   (doom-modeline-project-root-dir :foreground base6)
-   (solaire-mode-line-face
-    :inherit 'mode-line
-    :background modeline-bg-l
-    :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-l)))
-   (solaire-mode-line-inactive-face
-    :inherit 'mode-line-inactive
-    :background modeline-bg-inactive-l
-    :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-inactive-l)))
 
    ;; elscreen
    (elscreen-tab-other-screen-face :background "#353a42" :foreground "#1e2022")
