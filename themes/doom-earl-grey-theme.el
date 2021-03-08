@@ -190,10 +190,33 @@ determine the exact padding."
     (web-mode-symbol-face            :foreground blue)
     (web-mode-string-face            :inherit 'font-lock-string-face)
 
+    ;; rjsx-mode
+    (rjsx-tag  :foreground magenta)
+    (rjsx-text :inherit 'default)
+    (rjsx-tag-bracket-face :foreground fg-alt)
+    (rjsx-attr :foreground fg
+               :inherit 'italic)
+
+    ;; highlight-quoted-mode
+    (highlight-quoted-symbol :foreground orange) ;; TODO: maybe? Or blue?
+    (highlight-quoted-quote  :foreground teal)
+
+    ;; rainbow-delimiters
+    (rainbow-delimiters-depth-1-face :foreground (doom-blend bg blue 0.25))
+    (rainbow-delimiters-depth-2-face :foreground (doom-blend bg magenta 0.25))
+    (rainbow-delimiters-depth-3-face :foreground (doom-blend bg green 0.25))
+    (rainbow-delimiters-depth-4-face :foreground (doom-blend bg orange 0.25))
+    (rainbow-delimiters-depth-5-face :foreground (doom-blend bg teal 0.25))
+    (rainbow-delimiters-depth-6-face :foreground (doom-blend bg red 0.25))
+    (rainbow-delimiters-depth-7-face :foreground (doom-blend bg green 0.25))
+    (rainbow-delimiters-unmatched-face  :foreground red
+                                        :weight 'bold
+                                        :inverse-video t)
+    (rainbow-delimiters-mismatched-face :inherit 'rainbow-delimiters-unmatched-face)
+
    ;; TODO:
    ;;   - Git
    ;;   - completion list / company
-   ;;   - parens
    ;;   - dashboard
    ;;   - swiper
 
