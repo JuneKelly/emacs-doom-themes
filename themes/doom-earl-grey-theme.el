@@ -48,7 +48,7 @@ determine the exact padding."
    (fg-alt     '("#97928B" "black" "brightwhite"))
 
    ;; TODO: middle colors
-   (grey base4)
+   (grey base3)
    (red       '("#975555" "black" "red"))
    (orange    '("#A1712E" "black" "brightred"))
    (green     '("#727F55" "black" "green"))
@@ -67,11 +67,9 @@ determine the exact padding."
    (selection (doom-blend magenta bg 0.4))
    (builtin fg)
    (comments (if doom-earl-grey-brighter-comments
-                 base4
-                 (doom-darken base4 0.2)))
-   (doc-comments (if doom-earl-grey-brighter-comments
-                 base4
-                 (doom-darken base4 0.2)))
+                 grey
+                 (doom-darken grey 0.2)))
+   (doc-comments comments)
    (constants teal)
    (functions fg)
    (keywords magenta)
