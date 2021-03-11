@@ -221,7 +221,7 @@ determine the exact padding."
    ((region &override)
     :foreground fg)
 
-   ((lazy-highlight &override) :background bg-alt)
+   ((lazy-highlight &override) :background (doom-blend bg blue 0.78))
    ((line-number &override) :foreground (doom-lighten 'base5 0.2))
    ((line-number-current-line &override) :foreground base7)
    ((paren-face-match &override) :foreground red :background base3 :weight 'ultra-bold)
