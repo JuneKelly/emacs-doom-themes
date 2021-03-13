@@ -212,6 +212,42 @@ determine the exact padding."
                                         :inverse-video t)
     (rainbow-delimiters-mismatched-face :inherit 'rainbow-delimiters-unmatched-face)
 
+    ;; swiper
+    (swiper-line-face    :background  base1
+                         :foreground fg)
+    (swiper-match-face-1 :inherit 'unspecified
+                         :background  (doom-blend bg blue 0.85)
+                         :foreground blue
+                         :weight 'bold)
+    (swiper-background-match-face-1 :inherit 'unspecified
+                         :background  (doom-blend bg blue 0.95)
+                         :foreground blue
+                         :weight 'bold)
+    (swiper-match-face-2 :inherit 'unspecified
+                         :background (doom-blend bg orange 0.85)
+                         :foreground orange
+                         :weight 'bold)
+    (swiper-background-match-face-2 :inherit 'unspecified
+                         :background (doom-blend bg orange 0.95)
+                         :foreground orange
+                         :weight 'bold)
+    (swiper-match-face-3 :inherit 'unspecified
+                         :background (doom-blend bg green 0.85)
+                         :foreground green
+                         :weight 'bold)
+    (swiper-background-match-face-3 :inherit 'unspecified
+                         :background (doom-blend bg green 0.95)
+                         :foreground green
+                         :weight 'bold)
+    (swiper-match-face-4 :inherit 'unspecified
+                         :background (doom-blend bg teal 0.85)
+                         :foreground teal
+                         :weight 'bold)
+    (swiper-background-match-face-4 :inherit 'unspecified
+                         :background (doom-blend bg teal 0.95)
+                         :foreground teal
+                         :weight 'bold)
+
    ;; TODO:
    ;;   - Git
    ;;   - completion list / company
