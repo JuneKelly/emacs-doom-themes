@@ -96,7 +96,7 @@ determine the exact padding."
           doom-earl-grey-padded-modeline 4)))
 
    (modeline-fg     nil)
-   (modeline-fg-alt base2)
+   (modeline-fg-alt base4)
 
    (modeline-bg
     (if -modeline-bright
