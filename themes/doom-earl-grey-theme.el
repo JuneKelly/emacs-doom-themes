@@ -129,6 +129,8 @@ determine the exact padding."
    (mode-line-emphasis
     :foreground (if -modeline-bright base8 highlight))
    (doom-modeline-project-root-dir :foreground base6)
+
+   ;; solaire
    (solaire-mode-line-face
     :inherit 'mode-line
     :background modeline-bg-l
@@ -172,8 +174,7 @@ determine the exact padding."
                                           :foreground comments)
 
     ;; highlight-numbers-mode
-    (highlight-numbers-number :foreground teal
-                              :weight 'semi-bold)
+    (highlight-numbers-number :foreground teal)
 
     ;; web-mode
     (web-mode-doctype-face           :foreground comments)
@@ -187,6 +188,7 @@ determine the exact padding."
     (web-mode-html-tag-bracket-face  :foreground fg-alt)
     (web-mode-symbol-face            :foreground blue)
     (web-mode-string-face            :inherit 'font-lock-string-face)
+    (web-mode-current-element-highlight-face :foreground bg)
 
     ;; rjsx-mode
     (rjsx-tag  :foreground magenta)
@@ -249,16 +251,47 @@ determine the exact padding."
                          :foreground teal
                          :weight 'bold)
 
+    ;; tooltip
+    (tooltip :background bg-alt :foreground fg)
+
+    ;; company
+    (company-tooltip            :inherit 'tooltip)
+    (company-tooltip-annotation            :foreground magenta)
+    (company-tooltip-annotation-selection  :foreground magenta )
+    (company-tooltip-common                :foreground highlight
+                                           :distant-foreground base0
+                                           :weight 'bold)
+    (company-tooltip-search     :background highlight
+                                :foreground bg
+                                :distant-foreground fg
+                                :weight 'bold)
+    (company-tooltip-search-selection :background region)
+    (company-tooltip-selection  :background region
+                                :weight 'bold)
+    (company-tooltip-mouse      :background magenta
+                                :foreground bg
+                                :distant-foreground fg)
+    (company-tooltip-annotation :foreground magenta
+                                :distant-foreground bg)
+    (company-scrollbar-bg       :inherit 'tooltip)
+    (company-scrollbar-fg       :background highlight)
+    (company-preview            :foreground comments)
+    (company-preview-common     :background base3
+                                :foreground highlight)
+    (company-preview-search     :inherit 'company-tooltip-search)
+    (company-template-field     :inherit 'match)
+
+    ;; company-box
+    (company-box-candidate :foreground fg)
+
    ;; TODO:
    ;;   - Git
-   ;;   - completion list / company
    ;;   - dashboard
-   ;;   - swiper
 
    ((region &override)
     :foreground fg)
 
-   ((lazy-highlight &override) :background (doom-blend bg blue 0.78))
+   ((lazy-highlight &override) :background (doom-blend bg orange 0.74))
    ((line-number &override) :foreground (doom-lighten 'base5 0.2))
    ((line-number-current-line &override) :foreground base7)
    ((paren-face-match &override) :foreground red :background base3 :weight 'ultra-bold)
@@ -271,41 +304,98 @@ determine the exact padding."
 
    (magit-diff-hunk-heading-highlight :foreground bg :background blue :weight 'bold)
    (magit-diff-hunk-heading :foreground bg :background (doom-blend blue bg 0.3))
+
+   ;; ivy
    (ivy-posframe :background (doom-blend blue bg 0.2))
    (ivy-virtual :foreground (doom-blend blue bg 0.8))
    (ivy-minibuffer-match-face-1 :background nil :foreground (doom-blend fg bg 0.5) :weight 'light)
+
    (internal-border :foreground (doom-blend blue bg 0.2) :background (doom-blend blue bg 0.2))
    ;; --- major-mode faces -------------------
    ;; css-mode / scss-mode
+   (css-property             :foreground fg
+                             :inherit 'italic)
    (css-proprietary-property :foreground orange)
-   (css-property :foreground green)
-   (css-selector :foreground blue)
+   (css-selector             :foreground magenta)
+   (web-mode-css-property-name-face :foreground fg)
 
-   ;; markdown-mode
-   (markdown-markup-face :foreground base5)
-   (markdown-header-face :inherit 'bold :foreground red)
-   ((markdown-code-face &override) :background (doom-lighten base3 0.05))
+    ;; markdown-mode
+    (markdown-header-face           :inherit 'bold
+                                    :foreground magenta)
+    (markdown-header-delimiter-face :inherit 'markdown-header-face)
+    (markdown-metadata-key-face     :foreground green)
+    (markdown-list-face             :foreground fg
+                                    :inherit 'bold)
+    (markdown-link-face             :foreground blue)
+    (markdown-url-face              :foreground blue)
+    (markdown-italic-face           :inherit 'italic
+                                    :foreground fg)
+    (markdown-bold-face             :inherit 'bold
+                                    :foreground fg)
+    (markdown-markup-face           :foreground fg
+                                    :inherit 'bold)
+    (markdown-blockquote-face       :inherit 'italic
+                                    :foreground doc-comments)
+    (markdown-pre-face              :foreground fg)
+    (markdown-code-face             :foreground orange
+                                    :extend t)
+    (markdown-reference-face        :foreground doc-comments)
+    (markdown-inline-code-face      :inherit '(markdown-code-face markdown-pre-face)
+                                    :extend nil)
+    (markdown-html-attr-name-face     :inherit 'font-lock-variable-name-face)
+    (markdown-html-attr-value-face    :inherit 'font-lock-string-face)
+    (markdown-html-entity-face        :inherit 'font-lock-variable-name-face)
+    (markdown-html-tag-delimiter-face :inherit 'markdown-markup-face)
+    (markdown-html-tag-name-face      :inherit 'font-lock-keyword-face)
 
    (nav-flash-face :background region :foreground fg :weight 'bold)
+
    ;; org-mode
-   (org-hide :foreground hidden)
-   (solaire-org-hide-face :foreground hidden)
+   ((outline-1 &override) :foreground red)
+   ((outline-2 &override) :foreground orange)
+   (org-ellipsis :underline nil :background bg     :foreground red)
+   ((org-block-begin-line &override)
+    :foreground orange
+    :weight 'semi-bold
+    :extend t)
+   ((org-block &override)
+    :foreground orange
+    :extend t)
+   ((org-quote &override)
+    :foreground orange
+    :extend t)
 
-    ;; js2-mode
-    (js2-function-param    :foreground fg)
-    (js2-function-call     :foreground fg )
-    (js2-object-property   :foreground fg
-                           :inherit 'italic)
-    (js2-jsdoc-tag         :foreground doc-comments)
-    (js2-external-variable :foreground fg)
+   ;; js2-mode
+   (js2-function-param    :foreground fg)
+   (js2-function-call     :foreground fg )
+   (js2-object-property   :foreground fg
+                          :inherit 'italic)
+   (js2-jsdoc-tag         :foreground doc-comments)
+   (js2-external-variable :foreground fg)
 
-    ;; racket
-    (racket-keyword-argument-face :foreground orange)
-    (racket-selfeval-face :foreground teal)
+   ;; racket
+   (racket-keyword-argument-face :foreground orange)
+   (racket-selfeval-face :foreground teal)
 
-    ;; clojure
-    (clojure-keyword-face :foreground orange)
+   ;; clojure
+   (clojure-keyword-face :foreground orange)
 
+   ;; elixir
+   (elixir-atom-face :foreground blue)
+   (elixir-attribute-face :foreground teal)
+
+   ;; lsp
+   (lsp-ui-doc-background      :background base0)
+   (lsp-face-highlight-read    :background (doom-blend red bg 0.3))
+   (lsp-face-highlight-textual :inherit 'lsp-face-highlight-read)
+   (lsp-face-highlight-write   :inherit 'lsp-face-highlight-read)
+
+   ;; doom dashboard
+   (doom-dashboard-banner      :foreground comments)
+   (doom-dashboard-menu-title  :foreground (doom-blend bg magenta 0.24))
+   (doom-dashboard-menu-desc   :foreground (doom-blend bg green 0.24))
+   (doom-dashboard-footer-icon :foreground (doom-darken yellow 0.4))
+   (doom-dashboard-loaded      :foreground (doom-blend bg orange 0.24))
 
    ;; End
    )
