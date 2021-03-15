@@ -212,16 +212,17 @@ determine the exact padding."
                                         :inverse-video t)
     (rainbow-delimiters-mismatched-face :inherit 'rainbow-delimiters-unmatched-face)
 
+    ; TODO: check line highlight is same as others, projectile, etc
     ;; swiper
     (swiper-line-face    :background  base1
                          :foreground fg)
     (swiper-match-face-1 :inherit 'unspecified
-                         :background  (doom-blend bg blue 0.85)
-                         :foreground blue
+                         :background  base1
+                         :foreground fg
                          :weight 'bold)
     (swiper-background-match-face-1 :inherit 'unspecified
-                         :background  (doom-blend bg blue 0.95)
-                         :foreground blue
+                         :background  bg-alt
+                         :foreground fg
                          :weight 'bold)
     (swiper-match-face-2 :inherit 'unspecified
                          :background (doom-blend bg orange 0.85)
