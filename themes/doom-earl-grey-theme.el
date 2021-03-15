@@ -166,8 +166,8 @@ determine the exact padding."
     (makefile-targets :foreground magenta)
 
     ;; which-key
-    (which-key-key-face                   :foreground blue)
-    (which-key-group-description-face     :foreground magenta)
+    (which-key-key-face                   :foreground (doom-blend bg-alt magenta 0.1))
+    (which-key-group-description-face     :foreground (doom-blend bg-alt blue 0.1))
     (which-key-command-description-face   :foreground fg)
     (which-key-local-map-description-face :foreground orange)
     (which-key-separator-face             :background bg-alt
