@@ -363,13 +363,16 @@ determine the exact padding."
    (org-ellipsis :underline nil :background bg     :foreground red)
    ((org-block-begin-line &override)
     :foreground orange
+    :background bg-alt
     :weight 'semi-bold
     :extend t)
    ((org-block &override)
+    :background bg-alt
     :foreground orange
     :extend t)
    ((org-quote &override)
     :foreground orange
+    :background bg-alt
     :extend t)
 
    ;; js2-mode
