@@ -351,9 +351,15 @@ determine the exact padding."
    (nav-flash-face :background region :foreground fg :weight 'bold)
 
    ;; org-mode
-   ((outline-1 &override) :foreground magenta)
-   ((outline-2 &override) :foreground blue)
-   ((outline-3 &override) :foreground red)
+   ((outline-1 &override) :foreground red)
+   ((outline-2 &override) :foreground magenta)
+   ((outline-3 &override) :foreground orange)
+   ((outline-4 &override) :foreground teal)
+   ((outline-5 &override) :foreground red)
+   ((outline-6 &override) :foreground magenta)
+   ((outline-7 &override) :foreground orange)
+   ((outline-8 &override) :foreground teal)
+
    (org-ellipsis :underline nil :background bg     :foreground red)
    ((org-block-begin-line &override)
     :foreground orange
