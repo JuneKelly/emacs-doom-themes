@@ -319,34 +319,34 @@ determine the exact padding."
    (css-selector             :foreground magenta)
    (web-mode-css-property-name-face :foreground fg)
 
-    ;; markdown-mode
-    (markdown-header-face           :inherit 'bold
-                                    :foreground magenta)
-    (markdown-header-delimiter-face :inherit 'markdown-header-face)
-    (markdown-metadata-key-face     :foreground green)
-    (markdown-list-face             :foreground fg
-                                    :inherit 'bold)
-    (markdown-link-face             :foreground blue)
-    (markdown-url-face              :foreground blue)
-    (markdown-italic-face           :inherit 'italic
-                                    :foreground fg)
-    (markdown-bold-face             :inherit 'bold
-                                    :foreground fg)
-    (markdown-markup-face           :foreground fg
-                                    :inherit 'bold)
-    (markdown-blockquote-face       :inherit 'italic
-                                    :foreground doc-comments)
-    (markdown-pre-face              :foreground fg)
-    (markdown-code-face             :foreground orange
-                                    :extend t)
-    (markdown-reference-face        :foreground doc-comments)
-    (markdown-inline-code-face      :inherit '(markdown-code-face markdown-pre-face)
-                                    :extend nil)
-    (markdown-html-attr-name-face     :inherit 'font-lock-variable-name-face)
-    (markdown-html-attr-value-face    :inherit 'font-lock-string-face)
-    (markdown-html-entity-face        :inherit 'font-lock-variable-name-face)
-    (markdown-html-tag-delimiter-face :inherit 'markdown-markup-face)
-    (markdown-html-tag-name-face      :inherit 'font-lock-keyword-face)
+   ;; markdown-mode
+   (markdown-header-face           :inherit 'bold
+                                   :foreground magenta)
+   (markdown-header-delimiter-face :inherit 'markdown-header-face)
+   (markdown-metadata-key-face     :foreground green)
+   (markdown-list-face             :foreground fg
+                                   :inherit 'bold)
+   (markdown-link-face             :foreground blue)
+   (markdown-url-face              :foreground blue)
+   (markdown-italic-face           :inherit 'italic
+                                   :foreground fg)
+   (markdown-bold-face             :inherit 'bold
+                                   :foreground fg)
+   (markdown-markup-face           :foreground fg
+                                   :inherit 'bold)
+   (markdown-blockquote-face       :inherit 'italic
+                                   :foreground doc-comments)
+   (markdown-pre-face              :foreground fg)
+   (markdown-code-face             :foreground orange
+                                   :extend t)
+   (markdown-reference-face        :foreground doc-comments)
+   (markdown-inline-code-face      :inherit '(markdown-code-face markdown-pre-face)
+                                   :extend nil)
+   (markdown-html-attr-name-face     :inherit 'font-lock-variable-name-face)
+   (markdown-html-attr-value-face    :inherit 'font-lock-string-face)
+   (markdown-html-entity-face        :inherit 'font-lock-variable-name-face)
+   (markdown-html-tag-delimiter-face :inherit 'markdown-markup-face)
+   (markdown-html-tag-name-face      :inherit 'font-lock-keyword-face)
 
    (nav-flash-face :background region :foreground fg :weight 'bold)
 
