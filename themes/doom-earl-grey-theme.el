@@ -291,7 +291,7 @@ determine the exact padding."
    ((region &override)
     :foreground fg)
 
-   ((lazy-highlight &override) :background (doom-blend bg orange 0.74))
+   ((lazy-highlight &override) :background (doom-blend bg blue 0.84))
    ((line-number &override) :foreground (doom-lighten 'base5 0.2))
    ((line-number-current-line &override) :foreground base7)
    ((paren-face-match &override) :foreground red :background base3 :weight 'ultra-bold)
@@ -396,7 +396,7 @@ determine the exact padding."
 
    ;; lsp
    (lsp-ui-doc-background      :background base0)
-   (lsp-face-highlight-read    :background (doom-blend bg orange 0.74))
+   (lsp-face-highlight-read    :inherit 'lazy-highlight)
    (lsp-face-highlight-textual :inherit 'lsp-face-highlight-read)
    (lsp-face-highlight-write   :inherit 'lsp-face-highlight-read)
 
