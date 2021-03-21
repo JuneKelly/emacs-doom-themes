@@ -284,10 +284,6 @@ determine the exact padding."
     ;; company-box
     (company-box-candidate :foreground fg)
 
-   ;; TODO:
-   ;;   - Git
-   ;;   - dashboard
-
    ((region &override)
     :foreground fg)
 
@@ -302,8 +298,14 @@ determine the exact padding."
    ;; elscreen
    (elscreen-tab-other-screen-face :background "#353a42" :foreground "#1e2022")
 
+   ;; Magit
    (magit-diff-hunk-heading-highlight :foreground bg :background blue :weight 'bold)
    (magit-diff-hunk-heading :foreground bg :background (doom-blend blue bg 0.3))
+   (git-commit-summary :foreground fg)
+
+   ;; Dired
+   (diredfl-date-time :foreground blue)
+   (diredfl-dir-heading            :foreground magenta :weight 'bold)
 
    ;; ivy
    (ivy-posframe :background (doom-blend blue bg 0.2))
