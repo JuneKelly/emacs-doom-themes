@@ -214,7 +214,6 @@ determine the exact padding."
                                         :inverse-video t)
     (rainbow-delimiters-mismatched-face :inherit 'rainbow-delimiters-unmatched-face)
 
-    ; TODO: check line highlight is same as others, projectile, etc
     ;; swiper
     (swiper-line-face    :background  base1
                          :foreground fg)
@@ -227,28 +226,28 @@ determine the exact padding."
                          :foreground fg
                          :weight 'bold)
     (swiper-match-face-2 :inherit 'unspecified
+                         :background (doom-blend bg magenta 0.85)
+                         :foreground magenta
+                         :weight 'bold)
+    (swiper-background-match-face-2 :inherit 'unspecified
+                         :background (doom-blend bg magenta 0.95)
+                         :foreground magenta
+                         :weight 'bold)
+    (swiper-match-face-3 :inherit 'unspecified
+                         :background (doom-blend bg blue 0.85)
+                         :foreground blue
+                         :weight 'bold)
+    (swiper-background-match-face-3 :inherit 'unspecified
+                         :background (doom-blend bg blue 0.95)
+                         :foreground blue
+                         :weight 'bold)
+    (swiper-match-face-4 :inherit 'unspecified
                          :background (doom-blend bg orange 0.85)
                          :foreground orange
                          :weight 'bold)
-    (swiper-background-match-face-2 :inherit 'unspecified
+    (swiper-background-match-face-4 :inherit 'unspecified
                          :background (doom-blend bg orange 0.95)
                          :foreground orange
-                         :weight 'bold)
-    (swiper-match-face-3 :inherit 'unspecified
-                         :background (doom-blend bg green 0.85)
-                         :foreground green
-                         :weight 'bold)
-    (swiper-background-match-face-3 :inherit 'unspecified
-                         :background (doom-blend bg green 0.95)
-                         :foreground green
-                         :weight 'bold)
-    (swiper-match-face-4 :inherit 'unspecified
-                         :background (doom-blend bg teal 0.85)
-                         :foreground teal
-                         :weight 'bold)
-    (swiper-background-match-face-4 :inherit 'unspecified
-                         :background (doom-blend bg teal 0.95)
-                         :foreground teal
                          :weight 'bold)
 
     ;; tooltip
@@ -287,7 +286,8 @@ determine the exact padding."
    ((region &override)
     :foreground fg)
 
-   ((lazy-highlight &override) :background (doom-blend bg blue 0.84))
+   ((lazy-highlight &override)
+    :background (doom-blend bg (doom-lighten magenta 0.74) 0.5))
    ((line-number &override) :foreground (doom-lighten 'base5 0.2))
    ((line-number-current-line &override) :foreground base7)
    ((paren-face-match &override) :foreground red :background base3 :weight 'ultra-bold)
