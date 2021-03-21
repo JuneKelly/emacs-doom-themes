@@ -36,19 +36,19 @@ determine the exact padding."
   ((bg         '("#FCFBF9" nil       nil))
    (bg-alt     '("#F7F3EE" nil       nil))
    (base0      '("#F7F3EE" "black"   "black"))
-   (base1      '("#E9E5E0" "black" "brightblack"))
-   (base2      '("#DCD7D2" "black" "brightblack"))
-   (base3      '("#CEC9C3" "black" "brightblack"))
-   (base4      '("#A19A91" "black" "brightblack"))
-   (base5      '("#B2ADA7" "black" "brightblack"))
-   (base6      '("#89847D" "black" "brightblack"))
-   (base7      '("#6E6860" "black" "brightblack"))
-   (base8      '("#605A52" "black" "white"))
+   (base1      '("#E6E2DD" "black" "brightblack"))
+   (base2      '("#D5D1CB" "black" "brightblack"))
+   (base3      '("#C5C0BA" "black" "brightblack"))
+   (base4      '("#B4AFA9" "black" "brightblack"))
+   (base5      '("#A39E97" "black" "brightblack"))
+   (base6      '("#928D86" "black" "brightblack"))
+   (base7      '("#827C75" "black" "brightblack"))
+   (base8      '("#767068" "black" "white"))
    (fg         '("#605A52" "black" "white"))
    (fg-alt     '("#97928B" "black" "brightwhite"))
 
    ;; TODO: middle colors
-   (grey base3)
+   (grey base4)
    (red       '("#975555" "black" "red"))
    (orange    '("#A1712E" "black" "brightred"))
    (green     '("#727F55" "black" "green"))
@@ -67,8 +67,8 @@ determine the exact padding."
    (selection (doom-blend magenta bg 0.4))
    (builtin fg)
    (comments (if doom-earl-grey-brighter-comments
-                 grey
-                 (doom-darken grey 0.2)))
+                 base6
+                 grey))
    (doc-comments comments)
    (constants teal)
    (functions fg)
@@ -100,7 +100,7 @@ determine the exact padding."
 
    (modeline-bg
     (if -modeline-bright
-        (doom-darken base2 0.05)
+        base2
       base1))
    (modeline-bg-l
     (if -modeline-bright
@@ -142,8 +142,8 @@ determine the exact padding."
 
    ;; Font-Lock
    (font-lock-comment-face
-    :foreground comments ; TODO: Check this works
-    :background (if doom-earl-grey-comment-bg (doom-lighten bg 0.05)))
+    :foreground comments
+    :background (if doom-earl-grey-comment-bg base1))
    (font-lock-doc-face
     :inherit 'font-lock-comment-face
     :foreground doc-comments)
