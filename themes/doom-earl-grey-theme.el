@@ -47,7 +47,6 @@ determine the exact padding."
    (fg         '("#605A52" "#626262" "black"))
    (fg-alt     '("#97928B" "#949494" "brightblack"))
 
-   ;; TODO: middle colors
    (grey base4)
    (red       '("#975555" "#870000" "red"))
    (orange    '("#A1712E" "#875F00" "brightred"))
@@ -301,6 +300,13 @@ determine the exact padding."
    ;; Magit
    (magit-diff-hunk-heading-highlight :foreground bg :background blue :weight 'bold)
    (magit-diff-hunk-heading :foreground bg :background (doom-blend blue bg 0.3))
+   (magit-section-heading :foreground magenta)
+   (magit-branch-current    :foreground orange)
+   (magit-branch-local      :foreground blue)
+   (magit-branch-remote     :foreground teal)
+   (magit-blame-heading     :foreground magenta
+                            :background base1 :extend t)
+    (magit-blame-date       :foreground green)
    (git-commit-summary :foreground fg)
 
    ;; Dired
