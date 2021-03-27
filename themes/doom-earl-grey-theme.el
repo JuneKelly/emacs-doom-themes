@@ -302,7 +302,7 @@ determine the exact padding."
    (magit-diff-hunk-heading :foreground bg :background (doom-blend blue bg 0.3))
    (magit-blame-heading     :foreground magenta
                             :background base1 :extend t)
-    (magit-blame-date       :foreground red)
+   (magit-blame-date       :foreground blue)
    (git-commit-summary :foreground fg)
 
    ;; Dired
