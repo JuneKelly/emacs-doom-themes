@@ -149,7 +149,8 @@ determine the exact padding."
     (font-lock-comment-delimiter-face    :inherit font-lock-comment-face)
     (font-lock-builtin-face              :foreground fg
                                          :inherit 'italic :extend t)
-    (font-lock-type-face                 :inherit 'default)
+    (font-lock-type-face                 :foreground fg
+                                         :inherit 'italic :extend t)
     (font-lock-variable-name-face        :foreground blue)
     (font-lock-warning-face              :foreground red)
     (font-lock-negation-char-face        :inherit 'default)
