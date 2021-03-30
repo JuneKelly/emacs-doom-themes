@@ -287,13 +287,18 @@ determine the exact padding."
     :foreground fg)
 
    ((lazy-highlight &override)
-    :background (doom-blend bg (doom-lighten magenta 0.74) 0.5))
+    :background (doom-blend bg magenta 0.36)
+    :foreground bg)
    ((line-number &override) :foreground (doom-lighten 'base5 0.2))
    ((line-number-current-line &override) :foreground base7)
    ((paren-face-match &override) :foreground red :background base3 :weight 'ultra-bold)
    ((paren-face-mismatch &override) :foreground base3 :background red :weight 'ultra-bold)
    ((vimish-fold-overlay &override) :inherit 'font-lock-comment-face :background base3 :weight 'light)
    ((vimish-fold-fringe &override) :foreground teal)
+
+   ;; parens
+   ((show-paren-match &override)
+    :background base1)
 
    ;; elscreen
    (elscreen-tab-other-screen-face :background "#353a42" :foreground "#1e2022")
