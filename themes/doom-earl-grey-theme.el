@@ -384,6 +384,8 @@ determine the exact padding."
     :foreground orange
     :background bg-alt
     :extend t)
+   ((org-document-title &override)
+    :foreground magenta)
 
    ;; js2-mode
    (js2-function-param    :foreground fg)
