@@ -287,7 +287,7 @@ determine the exact padding."
     :foreground fg)
 
    ((lazy-highlight &override)
-    :background (doom-blend bg blue 0.82)
+    :background (doom-lighten magenta 0.86)
     :foreground fg)
    ((line-number &override) :foreground (doom-lighten 'base5 0.2))
    ((line-number-current-line &override) :foreground base7)
