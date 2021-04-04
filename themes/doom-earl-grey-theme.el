@@ -229,7 +229,7 @@ determine the exact padding."
                          :foreground magenta
                          :weight 'bold)
     (swiper-background-match-face-2 :inherit 'unspecified
-                         :background (doom-blend bg magenta 0.95)
+                         :background (doom-blend bg magenta 0.88)
                          :foreground magenta
                          :weight 'bold)
     (swiper-match-face-3 :inherit 'unspecified
@@ -286,8 +286,8 @@ determine the exact padding."
     :foreground fg)
 
    ((lazy-highlight &override)
-    :background (doom-lighten magenta 0.86)
-    :foreground fg)
+    :background (doom-blend bg magenta 0.85)
+    :foreground magenta)
    ((line-number &override) :foreground (doom-lighten 'base5 0.2))
    ((line-number-current-line &override) :foreground base7)
    ((paren-face-match &override) :foreground red :background base3 :weight 'ultra-bold)
