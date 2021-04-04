@@ -363,7 +363,7 @@ determine the exact padding."
    (markdown-pre-face              :foreground fg)
    (markdown-code-face             :foreground orange
                                    :extend t)
-   (markdown-reference-face        :foreground doc-comments)
+   (markdown-reference-face        :foreground blue)
    (markdown-inline-code-face      :inherit '(markdown-code-face markdown-pre-face)
                                    :extend nil)
    (markdown-html-attr-name-face     :inherit 'font-lock-variable-name-face)
