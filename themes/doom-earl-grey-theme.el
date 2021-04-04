@@ -103,14 +103,13 @@ determine the exact padding."
       base1))
    (modeline-bg-l
     (if -modeline-bright
-        base3
-      base2))
+        base2
+      (doom-blend base1 fg 0.96)))
    (modeline-bg-inactive (doom-darken bg 0.1))
    (modeline-bg-inactive-l `(,(doom-darken (car bg-alt) 0.05) ,@(cdr base1))))
 
   ;; --- extra faces ------------------------
-  ((default :background bg :foreground fg)
-
+  (
    ;; Modeline
    (doom-modeline-buffer-path       :foreground blue)
    (doom-modeline-buffer-major-mode :inherit 'doom-modeline-buffer-path
