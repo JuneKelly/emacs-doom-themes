@@ -259,15 +259,15 @@ determine the exact padding."
     (company-tooltip            :inherit 'tooltip)
     (company-tooltip-annotation            :foreground magenta)
     (company-tooltip-annotation-selection  :foreground magenta )
-    (company-tooltip-common                :foreground highlight
-                                           :distant-foreground base0
+    (company-tooltip-common                :foreground magenta
+                                           :distant-foreground bg-alt
                                            :weight 'bold)
-    (company-tooltip-search     :background highlight
+    (company-tooltip-search     :background magenta
                                 :foreground bg
                                 :distant-foreground fg
                                 :weight 'bold)
-    (company-tooltip-search-selection :background region)
-    (company-tooltip-selection  :background region
+    (company-tooltip-search-selection :background magenta-blend)
+    (company-tooltip-selection  :background magenta-blend
                                 :weight 'bold)
     (company-tooltip-mouse      :background magenta
                                 :foreground bg
