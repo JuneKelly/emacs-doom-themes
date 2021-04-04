@@ -60,6 +60,10 @@ determine the exact padding."
    (cyan      '("#398EAC" "#87D7D7" "brightcyan"))
    (dark-cyan '("#2C7088" "#87AFAF" "cyan"))
 
+   (magenta-blend (doom-blend bg magenta 0.9))
+   (blue-blend (doom-blend bg blue 0.9))
+   (orange-blend (doom-blend bg orange 0.9))
+
    ;; face categories -- required for all themes
    (highlight (doom-lighten blue 0.1))
    (vertical-bar (doom-darken bg 0.15))
@@ -215,37 +219,36 @@ determine the exact padding."
 
     ;; swiper
     (swiper-line-face    :background  base1
-                         :foreground fg)
+                         :foreground fg
+                         :weight 'bold)
     (swiper-match-face-1 :inherit 'unspecified
                          :background  base1
-                         :foreground fg
-                         :weight 'bold)
+                         :foreground fg)
     (swiper-background-match-face-1 :inherit 'unspecified
                          :background  bg-alt
-                         :foreground fg
-                         :weight 'bold)
+                         :foreground fg)
     (swiper-match-face-2 :inherit 'unspecified
-                         :background (doom-blend bg magenta 0.85)
+                         :background magenta-blend
                          :foreground magenta
                          :weight 'bold)
     (swiper-background-match-face-2 :inherit 'unspecified
-                         :background (doom-blend bg magenta 0.88)
+                         :background magenta-blend
                          :foreground magenta
                          :weight 'bold)
     (swiper-match-face-3 :inherit 'unspecified
-                         :background (doom-blend bg blue 0.85)
+                         :background blue-blend
                          :foreground blue
                          :weight 'bold)
     (swiper-background-match-face-3 :inherit 'unspecified
-                         :background (doom-blend bg blue 0.95)
+                         :background blue-blend
                          :foreground blue
                          :weight 'bold)
     (swiper-match-face-4 :inherit 'unspecified
-                         :background (doom-blend bg orange 0.85)
+                         :background orange-blend
                          :foreground orange
                          :weight 'bold)
     (swiper-background-match-face-4 :inherit 'unspecified
-                         :background (doom-blend bg orange 0.95)
+                         :background orange-blend
                          :foreground orange
                          :weight 'bold)
 
@@ -286,7 +289,7 @@ determine the exact padding."
     :foreground fg)
 
    ((lazy-highlight &override)
-    :background (doom-blend bg magenta 0.85)
+    :background magenta-blend
     :foreground magenta)
    ((line-number &override) :foreground (doom-lighten 'base5 0.2))
    ((line-number-current-line &override) :foreground base7)
@@ -317,7 +320,19 @@ determine the exact padding."
    ;; ivy
    (ivy-posframe :background (doom-blend blue bg 0.2))
    (ivy-virtual :foreground (doom-blend blue bg 0.8))
-   (ivy-minibuffer-match-face-1 :background nil :foreground (doom-blend fg bg 0.5) :weight 'light)
+   (ivy-minibuffer-match-face-1
+    :background nil
+    :foreground (doom-blend fg bg 0.5)
+    :weight 'light)
+    (ivy-minibuffer-match-face-2
+     :inherit 'ivy-minibuffer-match-face-1
+     :foreground magenta :background magenta-blend :weight 'semi-bold)
+    (ivy-minibuffer-match-face-3
+     :inherit 'ivy-minibuffer-match-face-2
+     :foreground blue :background blue-blend :weight 'semi-bold)
+    (ivy-minibuffer-match-face-4
+     :inherit 'ivy-minibuffer-match-face-2
+     :foreground orange :background orange-blend :weight 'semi-bold)
 
    (internal-border :foreground (doom-blend blue bg 0.2) :background (doom-blend blue bg 0.2))
    ;; --- major-mode faces -------------------
