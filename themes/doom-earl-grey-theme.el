@@ -156,8 +156,12 @@ determine the exact padding."
                                          :inherit 'italic :extend t)
     (font-lock-variable-name-face        :foreground blue)
     (font-lock-warning-face              :foreground red)
-    (font-lock-negation-char-face        :inherit 'default)
-    (font-lock-preprocessor-face         :inherit 'default)
+    (font-lock-negation-char-face        :foreground orange
+                                         :inherit 'default
+                                         :extend t)
+    (font-lock-preprocessor-face         :foreground orange
+                                         :inherit 'default
+                                         :extend t)
     (font-lock-preprocessor-char-face    :inherit 'default)
     (font-lock-regexp-grouping-backslash :inherit 'default)
     (font-lock-regexp-grouping-construct :inherit 'default)
@@ -192,6 +196,17 @@ determine the exact padding."
     (web-mode-symbol-face            :foreground blue)
     (web-mode-string-face            :inherit 'font-lock-string-face)
     (web-mode-current-element-highlight-face :foreground bg)
+
+    ;; xml
+    (nxml-element-local-name :foreground magenta)
+
+    ;; ocaml
+    (tuareg-font-lock-governing-face :foreground magenta)
+    (tuareg-font-lock-operator-face :foreground orange)
+
+    ;; php
+    (php-$this :foreground orange)
+
 
     ;; rjsx-mode
     (rjsx-tag  :foreground magenta)
@@ -432,6 +447,7 @@ determine the exact padding."
    (doom-dashboard-menu-desc   :foreground (doom-blend bg green 0.24))
    (doom-dashboard-footer-icon :foreground (doom-darken yellow 0.4))
    (doom-dashboard-loaded      :foreground (doom-blend bg orange 0.24))
+
 
    ;; End
    )
