@@ -191,7 +191,7 @@ determine the exact padding."
     (web-mode-html-attr-value-face   :inherit 'font-lock-string-face)
     (web-mode-html-entity-face       :foreground orange
                                      :inherit 'italic)
-    (web-mode-block-control-face     :foreground base1)
+    (web-mode-block-control-face     :foreground magenta)
     (web-mode-html-tag-bracket-face  :foreground fg-alt)
     (web-mode-symbol-face            :foreground blue)
     (web-mode-string-face            :inherit 'font-lock-string-face)
