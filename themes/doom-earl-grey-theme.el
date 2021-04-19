@@ -204,6 +204,10 @@ determine the exact padding."
     (tuareg-font-lock-governing-face :foreground magenta)
     (tuareg-font-lock-operator-face :foreground orange)
 
+    ;; haskell
+    (haskell-constructor-face :foreground blue)
+    (haskell-operator-face :foreground fg)
+
     ;; php
     (php-$this :foreground orange)
 
