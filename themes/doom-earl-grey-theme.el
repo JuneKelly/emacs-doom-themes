@@ -49,7 +49,9 @@ determine the exact padding."
 
    (grey base4)
    (red       '("#975555" "#870000" "red"))
-   (orange    '("#A1712E" "#875F00" "brightred"))
+   ;; (orange    '("#A1712E" "#875F00" "brightred"))
+   ;; (orange    '("#9F7538" "#875F00" "brightred"))
+   (orange    '("#9D7441" "#875F00" "brightred"))
    (green     '("#727F55" "#5F875F" "green"))
    (teal      '("#518082" "#87AFAF" "brightgreen"))
    (yellow    '("#A1712E" "875F00" "yellow"))
@@ -62,7 +64,7 @@ determine the exact padding."
 
    (magenta-blend (doom-blend bg magenta 0.9))
    (blue-blend (doom-blend bg blue 0.9))
-   (orange-blend (doom-blend bg orange 0.9))
+   (orange-blend (doom-blend bg orange 0.86))
    (red-blend (doom-blend bg red 0.7))
 
    ;; face categories -- required for all themes
