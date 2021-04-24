@@ -63,6 +63,7 @@ determine the exact padding."
    (magenta-blend (doom-blend bg magenta 0.9))
    (blue-blend (doom-blend bg blue 0.9))
    (orange-blend (doom-blend bg orange 0.9))
+   (red-blend (doom-blend bg red 0.7))
 
    ;; face categories -- required for all themes
    (highlight (doom-lighten blue 0.1))
@@ -205,7 +206,7 @@ determine the exact padding."
     (tuareg-font-lock-operator-face :foreground orange)
 
     ;; haskell
-    (haskell-constructor-face :foreground blue)
+    (haskell-constructor-face :foreground teal)
     (haskell-operator-face :foreground fg)
 
     ;; php
@@ -300,6 +301,8 @@ determine the exact padding."
                                 :foreground highlight)
     (company-preview-search     :inherit 'company-tooltip-search)
     (company-template-field     :inherit 'match)
+    (company-echo-common        :background red-blend
+                                :foreground fg)
 
     ;; company-box
     (company-box-candidate :foreground fg)
@@ -452,6 +455,8 @@ determine the exact padding."
    (doom-dashboard-footer-icon :foreground (doom-darken yellow 0.4))
    (doom-dashboard-loaded      :foreground (doom-blend bg orange 0.24))
 
+   ;; evil-snipe
+   (evil-snipe-first-match-face :foreground bg :background blue)
 
    ;; End
    )
