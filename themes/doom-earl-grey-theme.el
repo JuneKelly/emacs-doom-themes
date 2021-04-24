@@ -65,7 +65,7 @@ determine the exact padding."
    (magenta-blend (doom-blend bg magenta 0.9))
    (blue-blend (doom-blend bg blue 0.9))
    (orange-blend (doom-blend bg orange 0.86))
-   (red-blend (doom-blend bg red 0.7))
+   (red-blend (doom-blend bg red 0.76))
 
    ;; face categories -- required for all themes
    (highlight (doom-lighten blue 0.1))
@@ -174,6 +174,8 @@ determine the exact padding."
 
     ;; makefile-*-mode
     (makefile-targets :foreground magenta)
+    (makefile-space :background red-blend)
+    (makefile-makepp-perl :background blue-blend)
 
     ;; which-key
     (which-key-key-face                   :foreground (doom-blend bg-alt magenta 0.1))
