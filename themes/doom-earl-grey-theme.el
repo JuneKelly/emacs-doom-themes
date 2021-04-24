@@ -208,8 +208,16 @@ determine the exact padding."
     (tuareg-font-lock-operator-face :foreground orange)
 
     ;; haskell
-    (haskell-constructor-face :foreground blue)
+    (haskell-constructor-face :foreground teal)
     (haskell-operator-face :foreground fg)
+    ((haskell-type-face &override)
+     :foreground blue
+     :inherit 'font-lock-type-face
+     :extend t)
+    ((haskell-definition-face &override)
+     :foreground magenta
+     :inherit 'font-lock-function-name-face
+     :extend t)
 
     ;; php
     (php-$this :foreground orange)
