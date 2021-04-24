@@ -206,7 +206,7 @@ determine the exact padding."
     (tuareg-font-lock-operator-face :foreground orange)
 
     ;; haskell
-    (haskell-constructor-face :foreground teal)
+    (haskell-constructor-face :foreground blue)
     (haskell-operator-face :foreground fg)
 
     ;; php
