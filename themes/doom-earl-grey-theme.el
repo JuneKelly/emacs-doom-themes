@@ -436,6 +436,7 @@ determine the exact padding."
    ;; racket
    (racket-keyword-argument-face :foreground orange)
    (racket-selfeval-face :foreground teal)
+   (racket-debug-break-face :foreground bg :background red)
 
    ;; clojure
    (clojure-keyword-face :foreground orange)
