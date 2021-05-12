@@ -57,8 +57,8 @@ determine the exact padding."
    (dark-blue '("#556995" "#5F87AF" "blue"))
    (magenta   '("#83577D" "#875FAF" "magenta"))
    (violet    '("#83577D" "#875FAF" "brightmagenta"))
-   (cyan      '("#398EAC" "#87D7D7" "brightcyan"))
-   (dark-cyan '("#2C7088" "#87AFAF" "cyan"))
+   (cyan      '("#477A7B" "#87D7D7" "brightcyan"))
+   (dark-cyan '("#435375" "#5f5f87" "cyan"))
 
    (magenta-blend (doom-blend bg magenta 0.9))
    (blue-blend (doom-blend bg blue 0.9))
