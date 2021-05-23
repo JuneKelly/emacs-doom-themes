@@ -424,7 +424,7 @@ determine the exact padding."
     :extend t)
    ((org-block &override)
     :background bg-alt
-    :foreground orange
+    :foreground fg
     :extend t)
    ((org-quote &override)
     :foreground orange
