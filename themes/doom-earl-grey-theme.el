@@ -62,8 +62,8 @@ determine the exact padding."
 
    (magenta-blend (doom-blend bg magenta 0.9))
    (blue-blend (doom-blend bg blue 0.9))
-   (orange-blend (doom-blend bg orange 0.86))
-   (red-blend (doom-blend bg red 0.76))
+   (orange-blend (doom-blend bg orange 0.9))
+   (red-blend (doom-blend bg red 0.8))
 
    ;; face categories -- required for all themes
    (highlight (doom-lighten blue 0.1))
