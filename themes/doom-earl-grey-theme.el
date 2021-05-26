@@ -49,10 +49,10 @@ determine the exact padding."
 
    (grey base4)
    (red       '("#8F5652" "#870000" "red"))
-   (orange    '("#946E43" "#875F00" "brightred"))
+   (orange    '("#886A44" "#875F00" "brightred"))
    (green     '("#747B4D" "#5F875F" "green"))
    (teal      '("#477A7B" "#87AFAF" "brightgreen"))
-   (yellow    '("#946E43" "#875F00" "yellow"))
+   (yellow    '("#886A44" "#875F00" "yellow"))
    (blue      '("#556995" "#5F87AF" "brightblue"))
    (dark-blue '("#556995" "#5F87AF" "blue"))
    (magenta   '("#83577D" "#875FAF" "magenta"))
