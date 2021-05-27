@@ -447,7 +447,8 @@ determine the exact padding."
    (racket-debug-break-face :foreground bg :background red)
 
    ;; clojure
-   (clojure-keyword-face :foreground orange)
+   (clojure-keyword-face :foreground blue
+                         :inherit 'italic)
 
    ;; elixir
    (elixir-atom-face :foreground blue)
