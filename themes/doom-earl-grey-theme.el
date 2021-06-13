@@ -146,7 +146,8 @@ determine the exact padding."
    ;; Font-Lock
    (font-lock-comment-face
     :foreground comments
-    :background (if doom-earl-grey-comment-bg base1))
+    :background (if doom-earl-grey-comment-bg base1)
+    :inherit 'italic)
    (font-lock-doc-face
     :inherit 'font-lock-comment-face
     :foreground doc-comments)
