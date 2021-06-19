@@ -324,7 +324,9 @@ determine the exact padding."
    ;; TODO: highlight face?
    (lazy-highlight
     :background magenta-blend
-    :foreground magenta)
+    :foreground magenta
+    :inherit 'bold
+    :extend 't)
 
    ((line-number &override) :foreground (doom-lighten 'base5 0.2))
    ((line-number-current-line &override) :foreground base7)
