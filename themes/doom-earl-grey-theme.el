@@ -79,7 +79,7 @@ determine the exact padding."
    (keywords magenta)
    (methods fg)
    (operators fg)
-   (type magenta)
+   (type fg)
    (strings green)
    (variables blue)
    (numbers teal)
@@ -190,8 +190,7 @@ determine the exact padding."
     ;; web-mode
     (web-mode-doctype-face           :foreground comments)
     (web-mode-html-tag-face          :foreground magenta)
-    (web-mode-html-attr-name-face    :foreground fg
-                                     :inherit 'italic)
+    (web-mode-html-attr-name-face    :foreground blue)
     (web-mode-html-attr-value-face   :inherit 'font-lock-string-face)
     (web-mode-html-entity-face       :foreground orange
                                      :inherit 'italic)
@@ -387,7 +386,7 @@ determine the exact padding."
    (markdown-metadata-key-face     :foreground green)
    (markdown-list-face             :foreground fg
                                    :inherit 'bold)
-   (markdown-link-face             :foreground blue)
+   (markdown-link-face             :foreground teal)
    (markdown-url-face              :foreground blue)
    (markdown-italic-face           :inherit 'italic
                                    :foreground fg)
