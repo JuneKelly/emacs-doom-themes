@@ -439,7 +439,7 @@ determine the exact padding."
 
    ;; js2-mode
    (js2-function-param    :foreground blue)
-   (js2-function-call     :foreground fg 'italic)
+   (js2-function-call     :foreground fg :inherit 'italic)
    (js2-object-property   :foreground fg
                           :inherit 'italic)
    (js2-jsdoc-tag         :foreground doc-comments)
