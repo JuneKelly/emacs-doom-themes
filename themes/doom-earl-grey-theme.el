@@ -227,8 +227,7 @@ determine the exact padding."
     (rjsx-tag  :foreground magenta)
     (rjsx-text :inherit 'default)
     (rjsx-tag-bracket-face :foreground fg-alt)
-    (rjsx-attr :foreground fg
-               :inherit 'italic)
+    (rjsx-attr :foreground blue)
 
     ;; highlight-quoted-mode
     (highlight-quoted-symbol :foreground blue)
@@ -373,7 +372,7 @@ determine the exact padding."
    (internal-border :foreground (doom-blend blue bg 0.2) :background (doom-blend blue bg 0.2))
    ;; --- major-mode faces -------------------
    ;; css-mode / scss-mode
-   (css-property             :foreground fg
+   (css-property             :foreground blue
                              :inherit 'italic)
    (css-proprietary-property :foreground orange)
    (css-selector             :foreground magenta)
@@ -395,8 +394,9 @@ determine the exact padding."
    (markdown-markup-face           :foreground fg
                                    :inherit 'bold)
    (markdown-blockquote-face       :inherit 'italic
-                                   :foreground doc-comments)
-   (markdown-pre-face              :foreground fg)
+                                   :foreground orange)
+   (markdown-pre-face              :foreground orange
+                                   :extend t)
    (markdown-code-face             :foreground orange
                                    :extend t)
    (markdown-reference-face        :foreground blue)
@@ -405,20 +405,20 @@ determine the exact padding."
    (markdown-html-attr-name-face     :inherit 'font-lock-variable-name-face)
    (markdown-html-attr-value-face    :inherit 'font-lock-string-face)
    (markdown-html-entity-face        :inherit 'font-lock-variable-name-face)
-   (markdown-html-tag-delimiter-face :inherit 'markdown-markup-face)
+   (markdown-html-tag-delimiter-face :inherit 'default)
    (markdown-html-tag-name-face      :inherit 'font-lock-keyword-face)
 
    (nav-flash-face :background region :foreground fg :weight 'bold)
 
    ;; org-mode
-   ((outline-1 &override) :foreground red)
-   ((outline-2 &override) :foreground magenta)
-   ((outline-3 &override) :foreground orange)
-   ((outline-4 &override) :foreground teal)
-   ((outline-5 &override) :foreground red)
-   ((outline-6 &override) :foreground magenta)
-   ((outline-7 &override) :foreground orange)
-   ((outline-8 &override) :foreground teal)
+   ((outline-1 &override) :foreground magenta)
+   ((outline-2 &override) :foreground red)
+   ((outline-3 &override) :foreground teal)
+   ((outline-4 &override) :foreground orange)
+   ((outline-5 &override) :foreground magenta)
+   ((outline-6 &override) :foreground red)
+   ((outline-7 &override) :foreground teal)
+   ((outline-8 &override) :foreground orange)
 
    (org-ellipsis :underline nil :background bg     :foreground red)
    ((org-block-begin-line &override)
@@ -438,12 +438,15 @@ determine the exact padding."
     :foreground magenta)
 
    ;; js2-mode
-   (js2-function-param    :foreground fg)
-   (js2-function-call     :foreground fg )
+   (js2-function-param    :foreground blue)
+   (js2-function-call     :foreground fg 'italic)
    (js2-object-property   :foreground fg
                           :inherit 'italic)
    (js2-jsdoc-tag         :foreground doc-comments)
    (js2-external-variable :foreground fg)
+
+   ;; tide
+   (tide-hl-identifier-face :inherit 'lazy-highlight)
 
    ;; racket
    (racket-keyword-argument-face :foreground orange)
@@ -451,8 +454,7 @@ determine the exact padding."
    (racket-debug-break-face :foreground bg :background red)
 
    ;; clojure
-   (clojure-keyword-face :foreground blue
-                         :inherit 'italic)
+   (clojure-keyword-face :foreground blue)
 
    ;; elixir
    (elixir-atom-face :foreground blue)
