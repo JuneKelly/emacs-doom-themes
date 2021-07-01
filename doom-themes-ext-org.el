@@ -2,7 +2,7 @@
 ;;
 ;; Copyright (C) 2021 Henrik Lissner
 ;;
-;; Author: Henrik Lissner <http://github/hlissner>
+;; Author: Henrik Lissner <https://github.com/hlissner>
 ;; Maintainer: Henrik Lissner <henrik@lissner.net>
 ;; Created: August 3, 2017
 ;; Homepage: https://github.com/hlissner/doom-themes-ext-org
@@ -111,7 +111,7 @@ N is the match index."
                   1 'org-headline-done prepend)))
              ;; custom #hashtags & @at-tags for another level of organization
              (when doom-themes-org-fontify-special-tags
-               '(("\\s-\\(\\([#@]\\)[^+ \n.,]+\\)" 1 (doom-themes--org-tag-face 2) prepend)))))))
+               '(("\\s-\\(\\([#@]\\)[^@#+ \n][^+ \n.,]*\\)" 1 (doom-themes--org-tag-face 2) prepend)))))))
 
 (add-hook 'org-font-lock-set-keywords-hook #'doom-themes-enable-org-fontification)
 
