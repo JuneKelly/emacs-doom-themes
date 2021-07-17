@@ -402,7 +402,6 @@ determine the exact padding."
    ;; TODO: highlight face?
    (lazy-highlight
     :background eg-purple1
-    :foreground fg
     :extend 't)
 
    ((line-number &override) :foreground base4)
