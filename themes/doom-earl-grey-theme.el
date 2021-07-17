@@ -117,42 +117,37 @@ determine the exact padding."
    (eg-red8     '("#A57773" "#d75f5f" "red"))
    (eg-red9     '("#9A6763" "#d75f5f" "red"))
 
-   (bg         '("#FCFBF9" nil       nil))
-   (bg-alt     '("#F7F3EE" nil       nil))
-   (base0      '("#F7F3EE" "white"   "white"))
-   (base1      '("#E6E2DD" "#E4E4E4" "brightblack"))
-   (base2      '("#D5D1CB" "#D0D0D0" "brightblack"))
-   (base3      '("#C5C0BA" "#C6C6C6" "brightblack"))
-   (base4      '("#B4AFA9" "#B2B2B2" "brightblack"))
-   (base5      '("#A39E97" "#A8A8A8" "brightblack"))
-   (base6      '("#928D86" "#949494" "brightblack"))
-   (base7      '("#827C75" "#808080" "brightblack"))
-   (base8      '("#767068" "#767676" "black"))
-   (fg         '("#605A52" "#626262" "black"))
-   (fg-alt     '("#97928B" "#949494" "brightblack"))
+   (bg         eg-bg)
+   (bg-alt     eg-bg2)
+   (base0      (doom-lighten bg 0.1))
+   (base1      eg-grey2)
+   (base2      eg-grey3)
+   (base3      eg-grey4)
+   (base4      eg-grey5)
+   (base5      eg-grey6)
+   (base6      eg-grey7)
+   (base7      eg-grey8)
+   (base8      eg-fg2)
+   (fg         eg-fg)
+   (fg-alt     eg-grey8)
 
    (grey base4)
-   (red       '("#8F5652" "#870000" "red"))
-   (orange    '("#886A44" "#875F00" "brightred"))
-   (green     '("#747B4D" "#5F875F" "green"))
-   (teal      '("#477A7B" "#87AFAF" "brightgreen"))
-   (yellow    '("#886A44" "#875F00" "yellow"))
-   (blue      '("#556995" "#5F87AF" "brightblue"))
-   (dark-blue '("#556995" "#5F87AF" "blue"))
-   (magenta   '("#83577D" "#875FAF" "magenta"))
-   (violet    '("#83577D" "#875FAF" "brightmagenta"))
-   (cyan      '("#477A7B" "#87D7D7" "brightcyan"))
-   (dark-cyan '("#435375" "#5f5f87" "cyan"))
-
-   (magenta-blend (doom-blend bg magenta 0.9))
-   (blue-blend (doom-blend bg blue 0.9))
-   (orange-blend (doom-blend bg orange 0.9))
-   (red-blend (doom-blend bg red 0.8))
+   (red       eg-red)
+   (orange    eg-orange)
+   (green     eg-green)
+   (teal      eg-teal)
+   (yellow    eg-orange)
+   (blue      eg-blue)
+   (dark-blue eg-blue)
+   (magenta   eg-purple)
+   (violet    eg-purple)
+   (cyan      eg-teal)
+   (dark-cyan eg-teal)
 
    ;; face categories -- required for all themes
-   (highlight (doom-lighten blue 0.1))
-   (vertical-bar (doom-darken bg 0.15))
-   (selection (doom-blend magenta bg 0.4))
+   (highlight eg-blue8)
+   (vertical-bar base2)
+   (selection eg-purple4)
    (builtin fg)
    (comments (if doom-earl-grey-brighter-comments
                  base6
@@ -167,7 +162,7 @@ determine the exact padding."
    (strings green)
    (variables blue)
    (numbers teal)
-   (region base1)
+   (region eg-grey1)
    (error red)
    (warning yellow)
    (success green)
@@ -184,7 +179,7 @@ determine the exact padding."
           doom-earl-grey-padded-modeline 4)))
 
    (modeline-fg     nil)
-   (modeline-fg-alt base4)
+   (modeline-fg-alt eg-grey6)
 
    (modeline-bg
     (if -modeline-bright
@@ -257,12 +252,12 @@ determine the exact padding."
 
     ;; makefile-*-mode
     (makefile-targets :foreground magenta)
-    (makefile-space :background red-blend)
-    (makefile-makepp-perl :background blue-blend)
+    (makefile-space :background eg-red2)
+    (makefile-makepp-perl :background eg-blue1)
 
     ;; which-key
-    (which-key-key-face                   :foreground (doom-blend bg-alt magenta 0.1))
-    (which-key-group-description-face     :foreground (doom-blend bg-alt blue 0.1))
+    (which-key-key-face                   :foreground eg-purple8)
+    (which-key-group-description-face     :foreground eg-blue8)
     (which-key-command-description-face   :foreground fg)
     (which-key-local-map-description-face :foreground orange)
     (which-key-separator-face             :background bg-alt
@@ -318,50 +313,51 @@ determine the exact padding."
     (highlight-quoted-quote  :foreground teal)
 
     ;; rainbow-delimiters
-    (rainbow-delimiters-depth-1-face :foreground (doom-blend bg blue 0.25))
-    (rainbow-delimiters-depth-2-face :foreground (doom-blend bg magenta 0.25))
-    (rainbow-delimiters-depth-3-face :foreground (doom-blend bg green 0.25))
-    (rainbow-delimiters-depth-4-face :foreground (doom-blend bg orange 0.25))
-    (rainbow-delimiters-depth-5-face :foreground (doom-blend bg teal 0.25))
-    (rainbow-delimiters-depth-6-face :foreground (doom-blend bg red 0.25))
-    (rainbow-delimiters-depth-7-face :foreground (doom-blend bg green 0.25))
+    (rainbow-delimiters-depth-1-face :foreground eg-blue6)
+    (rainbow-delimiters-depth-2-face :foreground eg-purple6)
+    (rainbow-delimiters-depth-3-face :foreground eg-green6)
+    (rainbow-delimiters-depth-4-face :foreground eg-orange6)
+    (rainbow-delimiters-depth-5-face :foreground eg-teal6)
+    (rainbow-delimiters-depth-6-face :foreground eg-blue6)
+    (rainbow-delimiters-depth-7-face :foreground eg-purple6)
     (rainbow-delimiters-unmatched-face  :foreground red
                                         :weight 'bold
                                         :inverse-video t)
-    (rainbow-delimiters-mismatched-face :inherit 'rainbow-delimiters-unmatched-face)
+    (rainbow-delimiters-mismatched-face
+     :inherit 'rainbow-delimiters-unmatched-face)
 
     ;; swiper
-    (swiper-line-face    :background  base1
+    (swiper-line-face    :background  eg-purple1
                          :foreground fg
                          :weight 'bold)
     (swiper-match-face-1 :inherit 'unspecified
-                         :background  base1
+                         :background  eg-grey1
                          :foreground fg)
     (swiper-background-match-face-1 :inherit 'unspecified
                          :background  bg-alt
                          :foreground fg)
     (swiper-match-face-2 :inherit 'unspecified
-                         :background magenta-blend
-                         :foreground magenta
+                         :background eg-purple1
+                         :foreground eg-purple
                          :weight 'bold)
     (swiper-background-match-face-2 :inherit 'unspecified
-                         :background magenta-blend
-                         :foreground magenta
+                         :background eg-purple1
+                         :foreground eg-purple
                          :weight 'bold)
     (swiper-match-face-3 :inherit 'unspecified
-                         :background blue-blend
+                         :background eg-blue1
                          :foreground blue
                          :weight 'bold)
     (swiper-background-match-face-3 :inherit 'unspecified
-                         :background blue-blend
+                         :background eg-blue1
                          :foreground blue
                          :weight 'bold)
     (swiper-match-face-4 :inherit 'unspecified
-                         :background orange-blend
+                         :background eg-orange1
                          :foreground orange
                          :weight 'bold)
     (swiper-background-match-face-4 :inherit 'unspecified
-                         :background orange-blend
+                         :background eg-orange1
                          :foreground orange
                          :weight 'bold)
 
@@ -379,10 +375,10 @@ determine the exact padding."
                                 :foreground bg
                                 :distant-foreground fg
                                 :weight 'bold)
-    (company-tooltip-search-selection :background magenta-blend)
-    (company-tooltip-selection  :background magenta-blend
+    (company-tooltip-search-selection :background eg-purple1)
+    (company-tooltip-selection  :background eg-purple1
                                 :weight 'bold)
-    (company-tooltip-mouse      :background magenta
+    (company-tooltip-mouse      :background eg-purple8
                                 :foreground bg
                                 :distant-foreground fg)
     (company-tooltip-annotation :foreground magenta
@@ -394,7 +390,7 @@ determine the exact padding."
                                 :foreground highlight)
     (company-preview-search     :inherit 'company-tooltip-search)
     (company-template-field     :inherit 'match)
-    (company-echo-common        :background red-blend
+    (company-echo-common        :background eg-red2
                                 :foreground fg)
 
     ;; company-box
@@ -405,55 +401,56 @@ determine the exact padding."
 
    ;; TODO: highlight face?
    (lazy-highlight
-    :background magenta-blend
-    :foreground magenta
-    :inherit 'bold
+    :background eg-purple1
+    :foreground fg
     :extend 't)
 
-   ((line-number &override) :foreground (doom-lighten 'base5 0.2))
-   ((line-number-current-line &override) :foreground base7)
-   ((paren-face-match &override) :foreground red :background base3 :weight 'ultra-bold)
+   ((line-number &override) :foreground base4)
+   ((line-number-current-line &override) :foreground base6)
+   ((paren-face-match &override) :foreground red :background eg-grey1 :weight 'ultra-bold)
    ((paren-face-mismatch &override) :foreground base3 :background red :weight 'ultra-bold)
    ((vimish-fold-overlay &override) :inherit 'font-lock-comment-face :background base3 :weight 'light)
    ((vimish-fold-fringe &override) :foreground teal)
 
    ;; parens
    ((show-paren-match &override)
-    :background base1)
+    :background eg-grey1)
 
    ;; elscreen
-   (elscreen-tab-other-screen-face :background "#353a42" :foreground "#1e2022")
+   (elscreen-tab-other-screen-face :background bg-alt :foreground fg)
 
    ;; Magit
-   (magit-diff-hunk-heading-highlight :foreground bg :background blue :weight 'bold)
-   (magit-diff-hunk-heading :foreground bg :background (doom-blend blue bg 0.3))
+   (magit-diff-hunk-heading-highlight :foreground bg :background eg-blue8 :weight 'bold)
+   (magit-diff-hunk-heading :foreground bg :background eg-blue3)
    (magit-blame-heading     :foreground magenta
-                            :background base1 :extend t)
+                            :background eg-grey1 :extend t)
    (magit-blame-date       :foreground blue)
    (git-commit-summary :foreground fg)
 
    ;; Dired
-   (diredfl-date-time :foreground blue)
-   (diredfl-dir-heading            :foreground magenta :weight 'bold)
+   (diredfl-date-time    :foreground blue)
+   (diredfl-dir-heading  :foreground magenta :weight 'bold)
 
    ;; ivy
-   (ivy-posframe :background (doom-blend blue bg 0.2))
-   (ivy-virtual :foreground (doom-blend blue bg 0.8))
+   (ivy-posframe :background eg-blue1)
+   (ivy-virtual :foreground eg-blue8)
    (ivy-minibuffer-match-face-1
     :background nil
-    :foreground (doom-blend fg bg 0.5)
+    :foreground comments
     :weight 'light)
     (ivy-minibuffer-match-face-2
      :inherit 'ivy-minibuffer-match-face-1
-     :foreground magenta :background magenta-blend :weight 'semi-bold)
+     :foreground magenta :background eg-purple1 :weight 'semi-bold)
     (ivy-minibuffer-match-face-3
      :inherit 'ivy-minibuffer-match-face-2
-     :foreground blue :background blue-blend :weight 'semi-bold)
+     :foreground blue :background eg-blue1 :weight 'semi-bold)
     (ivy-minibuffer-match-face-4
      :inherit 'ivy-minibuffer-match-face-2
-     :foreground orange :background orange-blend :weight 'semi-bold)
+     :foreground orange :background eg-orange1 :weight 'semi-bold)
 
-   (internal-border :foreground (doom-blend blue bg 0.2) :background (doom-blend blue bg 0.2))
+    (internal-border
+     :foreground eg-blue8
+     :background eg-blue1)
    ;; --- major-mode faces -------------------
    ;; css-mode / scss-mode
    (css-property             :foreground blue
@@ -544,17 +541,17 @@ determine the exact padding."
    (elixir-attribute-face :foreground teal)
 
    ;; lsp
-   (lsp-ui-doc-background      :background base0)
+   (lsp-ui-doc-background      :background bg-alt)
    (lsp-face-highlight-read    :inherit 'lazy-highlight)
    (lsp-face-highlight-textual :inherit 'lsp-face-highlight-read)
    (lsp-face-highlight-write   :inherit 'lsp-face-highlight-read)
 
    ;; doom dashboard
    (doom-dashboard-banner      :foreground comments)
-   (doom-dashboard-menu-title  :foreground (doom-blend bg magenta 0.24))
-   (doom-dashboard-menu-desc   :foreground (doom-blend bg green 0.24))
-   (doom-dashboard-footer-icon :foreground (doom-darken yellow 0.4))
-   (doom-dashboard-loaded      :foreground (doom-blend bg orange 0.24))
+   (doom-dashboard-menu-title  :foreground eg-purple8)
+   (doom-dashboard-menu-desc   :foreground eg-green8)
+   (doom-dashboard-footer-icon :foreground eg-orange8)
+   (doom-dashboard-loaded      :foreground eg-blue8)
 
    ;; evil-snipe
    (evil-snipe-first-match-face :foreground bg :background blue)
