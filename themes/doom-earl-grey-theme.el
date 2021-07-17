@@ -162,7 +162,7 @@ determine the exact padding."
    (strings green)
    (variables blue)
    (numbers teal)
-   (region eg-grey1)
+   (region eg-purple1)
    (error red)
    (warning yellow)
    (success green)
@@ -434,6 +434,8 @@ determine the exact padding."
    ;; ivy
    (ivy-posframe :background eg-blue1)
    (ivy-virtual :foreground eg-blue8)
+   (ivy-cursor :foreground bg-alt
+               :background fg)
    (ivy-minibuffer-match-face-1
     :background nil
     :foreground comments
