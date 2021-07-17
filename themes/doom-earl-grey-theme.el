@@ -331,10 +331,10 @@ determine the exact padding."
                          :foreground fg
                          :weight 'bold)
     (swiper-match-face-1 :inherit 'unspecified
-                         :background  eg-grey1
+                         :background  eg-purple1
                          :foreground fg)
     (swiper-background-match-face-1 :inherit 'unspecified
-                         :background  bg-alt
+                         :background  eg-purple1
                          :foreground fg)
     (swiper-match-face-2 :inherit 'unspecified
                          :background eg-purple1
