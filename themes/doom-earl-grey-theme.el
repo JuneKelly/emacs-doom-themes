@@ -162,7 +162,7 @@ determine the exact padding."
    (strings green)
    (variables blue)
    (numbers teal)
-   (region eg-purple2)
+   (region eg-blue1)
    (error red)
    (warning yellow)
    (success green)
@@ -334,7 +334,7 @@ determine the exact padding."
                          :background  eg-purple2
                          :foreground fg)
     (swiper-background-match-face-1 :inherit 'unspecified
-                         :background  eg-purple2
+                         :background  eg-purple1
                          :foreground fg)
     (swiper-match-face-2 :inherit 'unspecified
                          :background eg-purple1
@@ -401,7 +401,7 @@ determine the exact padding."
 
    ;; TODO: highlight face?
    (lazy-highlight
-    :background eg-purple2
+    :background eg-blue1
     :extend 't)
 
    ((line-number &override) :foreground base4)
@@ -431,6 +431,7 @@ determine the exact padding."
    (diredfl-dir-heading  :foreground magenta :weight 'bold)
 
    ;; ivy
+   (ivy-current-match :background eg-purple2)
    (ivy-posframe :background eg-blue1)
    (ivy-virtual :foreground eg-blue8)
    (ivy-cursor :foreground bg-alt
@@ -490,7 +491,7 @@ determine the exact padding."
    (markdown-html-tag-delimiter-face :inherit 'default)
    (markdown-html-tag-name-face      :inherit 'font-lock-keyword-face)
 
-   (nav-flash-face :background region :foreground fg :weight 'bold)
+   (nav-flash-face :background eg-purple1 :foreground fg :weight 'bold)
 
    ;; org-mode
    ((outline-1 &override) :foreground magenta)
