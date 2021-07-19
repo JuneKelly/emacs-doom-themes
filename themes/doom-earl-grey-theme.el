@@ -329,7 +329,7 @@ determine the exact padding."
     ;; swiper
     (swiper-line-face    :background  eg-purple2
                          :foreground fg
-                         :weight 'bold)
+                         :weight 'semi-bold)
     (swiper-match-face-1 :inherit 'unspecified
                          :background  eg-purple2
                          :foreground fg)
@@ -338,28 +338,22 @@ determine the exact padding."
                          :foreground fg)
     (swiper-match-face-2 :inherit 'unspecified
                          :background eg-purple1
-                         :foreground eg-purple
-                         :weight 'bold)
+                         :foreground eg-purple)
     (swiper-background-match-face-2 :inherit 'unspecified
                          :background eg-purple1
-                         :foreground eg-purple
-                         :weight 'bold)
+                         :foreground eg-purple)
     (swiper-match-face-3 :inherit 'unspecified
                          :background eg-blue1
-                         :foreground blue
-                         :weight 'bold)
+                         :foreground blue)
     (swiper-background-match-face-3 :inherit 'unspecified
                          :background eg-blue1
-                         :foreground blue
-                         :weight 'bold)
+                         :foreground blue)
     (swiper-match-face-4 :inherit 'unspecified
                          :background eg-orange1
-                         :foreground orange
-                         :weight 'bold)
+                         :foreground orange)
     (swiper-background-match-face-4 :inherit 'unspecified
                          :background eg-orange1
-                         :foreground orange
-                         :weight 'bold)
+                         :foreground orange)
 
     ;; tooltip
     (tooltip :background bg-alt :foreground fg)
@@ -402,6 +396,7 @@ determine the exact padding."
    ;; TODO: highlight face?
    (lazy-highlight
     :background eg-blue1
+    :weight 'semi-bold
     :extend 't)
 
    ((line-number &override) :foreground base4)
@@ -431,11 +426,11 @@ determine the exact padding."
    (diredfl-dir-heading  :foreground magenta :weight 'bold)
 
    ;; ivy
-   (ivy-current-match :background eg-purple2)
    (ivy-posframe :background eg-blue1)
    (ivy-virtual :foreground eg-blue8)
    (ivy-cursor :foreground bg-alt
                :background fg)
+   (ivy-current-match :background eg-purple2)
    (ivy-minibuffer-match-face-1
     :background nil
     :foreground comments
