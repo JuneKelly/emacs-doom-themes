@@ -430,7 +430,6 @@ determine the exact padding."
    (ivy-virtual :foreground eg-blue8)
    (ivy-cursor :foreground bg-alt
                :background fg)
-   (ivy-current-match :background eg-purple2)
    (ivy-minibuffer-match-face-1
     :background nil
     :foreground comments
@@ -444,6 +443,7 @@ determine the exact padding."
     (ivy-minibuffer-match-face-4
      :inherit 'ivy-minibuffer-match-face-2
      :foreground teal :background eg-teal1 :weight 'semi-bold)
+   (ivy-current-match :background eg-purple2 :extend 't)
 
     (internal-border
      :foreground eg-blue8
