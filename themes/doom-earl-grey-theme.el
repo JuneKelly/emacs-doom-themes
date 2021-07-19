@@ -162,7 +162,7 @@ determine the exact padding."
    (strings green)
    (variables blue)
    (numbers teal)
-   (region eg-purple1)
+   (region eg-purple2)
    (error red)
    (warning yellow)
    (success green)
@@ -327,14 +327,14 @@ determine the exact padding."
      :inherit 'rainbow-delimiters-unmatched-face)
 
     ;; swiper
-    (swiper-line-face    :background  eg-purple1
+    (swiper-line-face    :background  eg-purple2
                          :foreground fg
                          :weight 'bold)
     (swiper-match-face-1 :inherit 'unspecified
-                         :background  eg-purple1
+                         :background  eg-purple2
                          :foreground fg)
     (swiper-background-match-face-1 :inherit 'unspecified
-                         :background  eg-purple1
+                         :background  eg-purple2
                          :foreground fg)
     (swiper-match-face-2 :inherit 'unspecified
                          :background eg-purple1
@@ -401,7 +401,7 @@ determine the exact padding."
 
    ;; TODO: highlight face?
    (lazy-highlight
-    :background eg-purple1
+    :background eg-purple2
     :extend 't)
 
    ((line-number &override) :foreground base4)
