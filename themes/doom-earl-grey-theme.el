@@ -331,29 +331,29 @@ determine the exact padding."
                          :foreground fg
                          :weight 'semi-bold)
     (swiper-match-face-1 :inherit 'unspecified
-                         :background  eg-purple2
+                         :background  eg-blue1
                          :foreground fg)
     (swiper-background-match-face-1 :inherit 'unspecified
-                         :background  eg-purple1
+                         :background  eg-blue1
                          :foreground fg)
     (swiper-match-face-2 :inherit 'unspecified
-                         :background eg-purple1
-                         :foreground eg-purple)
+                         :background eg-blue1
+                         :foreground eg-blue)
     (swiper-background-match-face-2 :inherit 'unspecified
-                         :background eg-purple1
-                         :foreground eg-purple)
+                         :background eg-blue1
+                         :foreground eg-blue)
     (swiper-match-face-3 :inherit 'unspecified
-                         :background eg-blue1
-                         :foreground blue)
+                         :background eg-orange1
+                         :foreground orange)
     (swiper-background-match-face-3 :inherit 'unspecified
-                         :background eg-blue1
-                         :foreground blue)
+                         :background eg-orange1
+                         :foreground orange)
     (swiper-match-face-4 :inherit 'unspecified
-                         :background eg-orange1
-                         :foreground orange)
+                         :background eg-teal1
+                         :foreground teal)
     (swiper-background-match-face-4 :inherit 'unspecified
-                         :background eg-orange1
-                         :foreground orange)
+                         :background eg-teal1
+                         :foreground teal)
 
     ;; tooltip
     (tooltip :background bg-alt :foreground fg)
@@ -437,13 +437,13 @@ determine the exact padding."
     :weight 'light)
     (ivy-minibuffer-match-face-2
      :inherit 'ivy-minibuffer-match-face-1
-     :foreground magenta :background eg-purple1 :weight 'semi-bold)
+     :foreground blue :background eg-blue1 :weight 'semi-bold)
     (ivy-minibuffer-match-face-3
      :inherit 'ivy-minibuffer-match-face-2
-     :foreground blue :background eg-blue1 :weight 'semi-bold)
+     :foreground orange :background eg-orange1 :weight 'semi-bold)
     (ivy-minibuffer-match-face-4
      :inherit 'ivy-minibuffer-match-face-2
-     :foreground orange :background eg-orange1 :weight 'semi-bold)
+     :foreground teal :background eg-teal1 :weight 'semi-bold)
 
     (internal-border
      :foreground eg-blue8
