@@ -162,7 +162,7 @@ determine the exact padding."
    (strings green)
    (variables blue)
    (numbers teal)
-   (region eg-blue1)
+   (region eg-purple1)
    (error red)
    (warning yellow)
    (success green)
@@ -331,29 +331,32 @@ determine the exact padding."
                          :foreground fg
                          :weight 'semi-bold)
     (swiper-match-face-1 :inherit 'unspecified
-                         :background  eg-blue1
+                         :background  eg-purple1
                          :foreground fg)
     (swiper-background-match-face-1 :inherit 'unspecified
-                         :background  eg-blue1
+                         :background  eg-bg2
                          :foreground fg)
     (swiper-match-face-2 :inherit 'unspecified
-                         :background eg-blue1
-                         :foreground eg-blue)
+                         :background eg-purple1
+                         :foreground eg-purple)
     (swiper-background-match-face-2 :inherit 'unspecified
-                         :background eg-blue1
-                         :foreground eg-blue)
+                         :background eg-purple1
+                         :foreground eg-purple
+                         :weight 'semi-bold)
     (swiper-match-face-3 :inherit 'unspecified
-                         :background eg-orange1
-                         :foreground orange)
+                         :background eg-blue1
+                         :foreground blue)
     (swiper-background-match-face-3 :inherit 'unspecified
-                         :background eg-orange1
-                         :foreground orange)
+                         :background eg-blue1
+                         :foreground blue
+                         :weight 'semi-bold)
     (swiper-match-face-4 :inherit 'unspecified
                          :background eg-teal1
                          :foreground teal)
     (swiper-background-match-face-4 :inherit 'unspecified
                          :background eg-teal1
-                         :foreground teal)
+                         :foreground teal
+                         :weight 'semi-bold)
 
     ;; tooltip
     (tooltip :background bg-alt :foreground fg)
@@ -395,7 +398,8 @@ determine the exact padding."
 
    ;; TODO: highlight face?
    (lazy-highlight
-    :background eg-blue1
+    :background eg-purple1
+    :foreground eg-purple
     :weight 'semi-bold
     :extend 't)
 
@@ -433,16 +437,16 @@ determine the exact padding."
    (ivy-minibuffer-match-face-1
     :background nil
     :foreground comments
-    :weight 'light)
+    :weight 'semi-bold)
     (ivy-minibuffer-match-face-2
      :inherit 'ivy-minibuffer-match-face-1
-     :foreground blue :background eg-blue1 :weight 'semi-bold)
+     :foreground eg-purple :background eg-purple1)
     (ivy-minibuffer-match-face-3
      :inherit 'ivy-minibuffer-match-face-2
-     :foreground orange :background eg-orange1 :weight 'semi-bold)
+     :foreground blue :background eg-orange1)
     (ivy-minibuffer-match-face-4
      :inherit 'ivy-minibuffer-match-face-2
-     :foreground teal :background eg-teal1 :weight 'semi-bold)
+     :foreground teal :background eg-teal1)
    (ivy-current-match :background eg-purple2 :extend 't)
 
     (internal-border
