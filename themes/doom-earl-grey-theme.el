@@ -145,7 +145,7 @@ determine the exact padding."
    (dark-cyan eg-teal)
 
    ;; face categories -- required for all themes
-   (highlight eg-blue8)
+   (highlight eg-blue6)
    (vertical-bar base2)
    (selection eg-purple4)
    (builtin fg)
@@ -396,13 +396,6 @@ determine the exact padding."
    ((region &override)
     :foreground fg)
 
-   ;; TODO: highlight face?
-   (lazy-highlight
-    :background eg-purple1
-    :foreground eg-purple
-    :weight 'semi-bold
-    :extend 't)
-
    ((line-number &override) :foreground base4)
    ((line-number-current-line &override) :foreground base6)
    ((paren-face-match &override) :foreground red :background eg-grey1 :weight 'ultra-bold)
@@ -525,9 +518,6 @@ determine the exact padding."
    (js2-object-property   :foreground fg)
    (js2-jsdoc-tag         :foreground doc-comments)
    (js2-external-variable :foreground fg)
-
-   ;; tide
-   (tide-hl-identifier-face :inherit 'lazy-highlight)
 
    ;; racket
    (racket-keyword-argument-face :foreground orange)
