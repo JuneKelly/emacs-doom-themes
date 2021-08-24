@@ -145,7 +145,7 @@ determine the exact padding."
    (dark-cyan eg-teal)
 
    ;; face categories -- required for all themes
-   (highlight eg-blue6)
+   (highlight eg-blue7)
    (vertical-bar base2)
    (selection eg-purple4)
    (builtin fg)
@@ -495,6 +495,7 @@ determine the exact padding."
    ((outline-7 &override) :foreground teal)
    ((outline-8 &override) :foreground orange)
 
+   (org-drawer  :foreground eg-orange)
    (org-ellipsis :underline nil :background bg     :foreground red)
    ((org-block-begin-line &override)
     :foreground orange
