@@ -53,7 +53,7 @@ determine the exact padding."
    (eg-grey4    '("#BEBBB6" "#B2B2B2" "brightblack"))
    (eg-grey5    '("#AEABA6" "#A8A8A8" "brightblack"))
    (eg-grey6    '("#9E9A95" "#949494" "brightblack"))
-   (eg-grey7    '("#8F8A84" "#8A8A8A" "brightblack"))
+   (eg-grey7    '("#8FeA84" "#8A8A8A" "brightblack"))
    (eg-grey8    '("#7F7A73" "#767676" "brightblack"))
    (eg-grey9    '("#706A63" "#6C6C6C" "brightblack"))
 
@@ -131,7 +131,7 @@ determine the exact padding."
    (fg         eg-fg)
    (fg-alt     eg-grey8)
 
-   (grey base4)
+   (grey base5)
    (red       eg-red)
    (orange    eg-orange)
    (green     eg-green)
@@ -150,8 +150,8 @@ determine the exact padding."
    (selection eg-purple4)
    (builtin fg)
    (comments (if doom-earl-grey-brighter-comments
-                 base6
-                 grey))
+                 eg-grey7
+                 eg-grey6))
    (doc-comments comments)
    (constants teal)
    (functions fg)
@@ -539,7 +539,7 @@ determine the exact padding."
    (lsp-face-highlight-write   :inherit 'lsp-face-highlight-read)
 
    ;; doom dashboard
-   (doom-dashboard-banner      :foreground comments)
+   (doom-dashboard-banner      :foreground eg-grey5)
    (doom-dashboard-menu-title  :foreground eg-purple8)
    (doom-dashboard-menu-desc   :foreground eg-green8)
    (doom-dashboard-footer-icon :foreground eg-orange8)
