@@ -53,7 +53,7 @@ determine the exact padding."
    (eg-grey4    '("#BEBBB6" "#B2B2B2" "brightblack"))
    (eg-grey5    '("#AEABA6" "#A8A8A8" "brightblack"))
    (eg-grey6    '("#9E9A95" "#949494" "brightblack"))
-   (eg-grey7    '("#8FeA84" "#8A8A8A" "brightblack"))
+   (eg-grey7    '("#8F8A84" "#8A8A8A" "brightblack"))
    (eg-grey8    '("#7F7A73" "#767676" "brightblack"))
    (eg-grey9    '("#706A63" "#6C6C6C" "brightblack"))
 
