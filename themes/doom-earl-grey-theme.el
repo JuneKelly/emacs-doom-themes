@@ -298,6 +298,10 @@ determine the exact padding."
      :inherit 'font-lock-function-name-face
      :extend t)
 
+    ;; Highlight
+    (lazy-highlight :foreground eg-fg2
+                    :background eg-blue2 :inherit 'default :extend t)
+
     ;; php
     (php-$this :foreground orange)
 
