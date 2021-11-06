@@ -46,6 +46,7 @@ determine the exact padding."
    (eg-orange   '("#886A44" "#875F00" "brightred"))
    (eg-green    '("#747B4D" "#5F875F" "green"))
    (eg-red      '("#8F5652" "#870000" "red"))
+   (eg-berry    '("#AA5087" "#996699" "brightmagenta"))
 
    (eg-grey1    '("#ECEBE8" "#E4E4E4" "white"))
    (eg-grey2    '("#DDDBD8" "#DADADA" "brightblack"))
@@ -107,15 +108,25 @@ determine the exact padding."
    (eg-green8   '("#8F956F" "#5F875F" "green"))
    (eg-green9   '("#82885E" "#5F875F" "green"))
 
-   (eg-red1     '("#F1EBE8" "#d78787" "brightred"))
-   (eg-red2     '("#E6DAD8" "#d78787" "brightred"))
-   (eg-red3     '("#DBCAC7" "#d78787" "brightred"))
-   (eg-red4     '("#D0B9B6" "#d78787" "brightred"))
-   (eg-red5     '("#C6A9A6" "#d78787" "brightred"))
-   (eg-red6     '("#BB9895" "#d75f5f" "brightred"))
-   (eg-red7     '("#B08884" "#d75f5f" "brightred"))
-   (eg-red8     '("#A57773" "#d75f5f" "red"))
-   (eg-red9     '("#9A6763" "#d75f5f" "red"))
+   (eg-red1     '("#F1EBE8" "#D78787" "brightred"))
+   (eg-red2     '("#E6DAD8" "#D78787" "brightred"))
+   (eg-red3     '("#DBCAC7" "#D78787" "brightred"))
+   (eg-red4     '("#D0B9B6" "#D78787" "brightred"))
+   (eg-red5     '("#C6A9A6" "#D78787" "brightred"))
+   (eg-red6     '("#BB9895" "#D75F5F" "brightred"))
+   (eg-red7     '("#B08884" "#D75F5F" "brightred"))
+   (eg-red8     '("#A57773" "#D75F5F" "red"))
+   (eg-red9     '("#9A6763" "#D75F5F" "red"))
+
+   (eg-berry1     '("#F4EAEE" "#D787D7" "brightmagenta"))
+   (eg-berry2     '("#ECD9E2" "#D787D7" "brightmagenta"))
+   (eg-berry3     '("#E3C8D7" "#D787D7" "brightmagenta"))
+   (eg-berry4     '("#DBB7CB" "#D787D7" "brightmagenta"))
+   (eg-berry5     '("#D3A6C0" "#D787D7" "brightmagenta"))
+   (eg-berry6     '("#CB94B5" "#AF00AF" "brightmagenta"))
+   (eg-berry7     '("#C383A9" "#AF00AF" "brightmagenta"))
+   (eg-berry8     '("#BA729E" "#AF00AF" "brightmagenta"))
+   (eg-berry9     '("#B26192" "#AF00AF" "brightmagenta"))
 
    (bg         eg-bg)
    (bg-alt     eg-bg2)
@@ -162,7 +173,7 @@ determine the exact padding."
    (strings green)
    (variables blue)
    (numbers teal)
-   (region eg-purple1)
+   (region eg-berry1)
    (error red)
    (warning yellow)
    (success green)
@@ -300,7 +311,7 @@ determine the exact padding."
 
     ;; Highlight
     (lazy-highlight :foreground eg-fg2
-                    :background eg-blue2 :inherit 'default :extend t)
+                    :background eg-berry2 :inherit 'default :extend t)
 
     ;; php
     (php-$this :foreground orange)
@@ -463,11 +474,10 @@ determine the exact padding."
     (ivy-minibuffer-match-face-4
      :inherit 'ivy-minibuffer-match-face-2
      :foreground teal :background eg-teal1)
-   (ivy-current-match :background eg-purple2 :extend 't)
 
-    (internal-border
-     :foreground eg-blue8
-     :background eg-blue1)
+   (internal-border
+    :foreground eg-blue8
+    :background eg-blue1)
    ;; --- major-mode faces -------------------
    ;; css-mode / scss-mode
    (css-property             :foreground blue
