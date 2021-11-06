@@ -166,9 +166,9 @@ determine the exact padding."
    (error red)
    (warning yellow)
    (success green)
-   (vc-modified orange)
-   (vc-added green)
-   (vc-deleted red)
+   (vc-modified eg-orange8)
+   (vc-added eg-green8)
+   (vc-deleted eg-red8)
 
    ;; custom categories
    (hidden `(,(car bg) "black" "black"))
@@ -414,13 +414,32 @@ determine the exact padding."
    ;; elscreen
    (elscreen-tab-other-screen-face :background bg-alt :foreground fg)
 
-   ;; Magit
+   ;; Magit / Diff
    (magit-diff-hunk-heading-highlight :foreground bg :background eg-blue8 :weight 'bold)
-   (magit-diff-hunk-heading :foreground bg :background eg-blue3)
+   (magit-diff-hunk-heading :foreground bg :background eg-blue5)
    (magit-blame-heading     :foreground magenta
                             :background eg-grey1 :extend t)
    (magit-blame-date       :foreground blue)
+
+   (magit-diff-removed :background eg-red1
+                       :foreground eg-red)
+   (magit-diff-removed-highlight :background eg-red3
+                                 :foreground eg-red)
+   (diff-refine-removed :background eg-red9
+                        :foreground eg-red1)
+
+   (magit-diff-added :background eg-green1
+                     :foreground eg-green)
+   (magit-diff-added-highlight :background eg-green3
+                               :foreground eg-green)
+   (diff-refine-added :background eg-green
+                      :foreground bg)
+
+   (diff-refine-changed :background eg-purple9
+                        :foreground bg)
+
    (git-commit-summary :foreground fg)
+
 
    ;; Dired
    (diredfl-date-time    :foreground blue)
